@@ -1,4 +1,5 @@
 export type Locale = "pt-BR" | "en";
+export type CountdownPreviewState = "auto" | "before" | "today" | "after";
 
 export const retirementDate = "2026-12-31T23:59:59-03:00";
 
@@ -43,7 +44,15 @@ type SiteCopy = {
     redditTitle: string;
     ariaPrefix: string;
   };
-  heroCopy: { eyebrow: string; headline: string; subhead: string; shareLabel: string; continueLabel: string };
+  heroCopy: {
+    eyebrow: string;
+    headline: string;
+    subhead: string;
+    todaySubhead: string;
+    afterSubhead: string;
+    shareLabel: string;
+    continueLabel: string;
+  };
   shareLines: string[];
   legacy: {
     eyebrow: string;
@@ -68,14 +77,23 @@ type SiteCopy = {
     eyebrow: string;
     title: string;
   };
-  finalCta: { titleLine1: string; titleHighlight: string; description: string };
+  finalCta: {
+    titleLine1: string;
+    titleHighlight: string;
+    description: string;
+    todayDescription: string;
+    afterDescription: string;
+  };
   footer: { description: string; copyright: string };
   shareStripAria: string;
   countdown: {
+    todayEyebrow: string;
     todayTitle: string;
     todayDescription: string;
+    afterEyebrow: string;
     afterTitle: string;
     afterDescription: string;
+    afterHighlights: string[];
     ariaLabel: string;
     days: string;
     hours: string;
@@ -113,6 +131,8 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       eyebrow: "TRIBUTO DE FÃ",
       headline: "O dia que o CS vai parar.",
       subhead: "A contagem regressiva para a aposentadoria do Professor já começou.",
+      todaySubhead: "Hoje o competitivo se despede do Professor, e uma comunidade inteira agradece.",
+      afterSubhead: "O competitivo ficou para a história. O legado do Professor segue vivo em cada servidor.",
       shareLabel: "Compartilhe esta homenagem",
       continueLabel: "Continue",
     },
@@ -178,6 +198,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       titleLine1: "Marca aquele amigo",
       titleHighlight: "que aprendeu CS com o Professor.",
       description: "Essa contagem regressiva merece chegar em todo brasileiro que um dia sonhou de mouse na mão.",
+      todayDescription:
+        "Hoje a homenagem é sobre agradecer. Envie para quem viveu essa história junto com você.",
+      afterDescription:
+        "Agora a homenagem é sobre legado. Envie para quem aprendeu, torceu ou começou no CS por causa do Professor.",
     },
     footer: {
       description: "Este não é um site oficial. Projeto criado por um fã em homenagem ao FalleN.",
@@ -185,10 +209,14 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     shareStripAria: "Frases compartilháveis",
     countdown: {
-      todayTitle: "Hoje é o dia.",
+      todayEyebrow: "O dia chegou",
+      todayTitle: "Hoje é o dia da aposentadoria.",
       todayDescription: "Obrigado, Professor. Por tudo. O Brasil inteiro tá com você.",
-      afterTitle: "O Professor pendurou o mouse.",
-      afterDescription: "FalleN se aposentou do competitivo, mas sua história continua viva em cada player que ele inspirou.",
+      afterEyebrow: "Legado ativo",
+      afterTitle: "O Professor se aposentou do competitivo.",
+      afterDescription:
+        "FalleNzão se aposentou do competitivo, mas segue fortalecendo a comunidade e deixando seu legado.",
+      afterHighlights: ["O jogador virou referência.", "O professor segue ensinando.", "A comunidade carrega o legado."],
       ariaLabel: "Contagem regressiva para a aposentadoria do FalleN",
       days: "Dias",
       hours: "Horas",
@@ -221,6 +249,8 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       eyebrow: "FAN TRIBUTE",
       headline: "The day CS will stop.",
       subhead: "The countdown to The Professor's retirement has already begun.",
+      todaySubhead: "Today competitive CS says goodbye to The Professor, and a whole community says thank you.",
+      afterSubhead: "Competition became history. The Professor's legacy keeps living on every server.",
       shareLabel: "Share this tribute",
       continueLabel: "Scroll",
     },
@@ -273,6 +303,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       titleLine1: "Tag that friend",
       titleHighlight: "who learned CS with The Professor.",
       description: "This countdown deserves to reach everyone who once dreamed with a mouse in hand.",
+      todayDescription:
+        "Today this tribute is about gratitude. Send it to someone who lived this story with you.",
+      afterDescription:
+        "Now this tribute is about legacy. Send it to someone who learned, cheered, or started playing because of The Professor.",
     },
     footer: {
       description: "This is not an official website. A fan-made tribute project for FalleN.",
@@ -280,10 +314,14 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     shareStripAria: "Shareable lines",
     countdown: {
+      todayEyebrow: "The day has come",
       todayTitle: "Today is the day.",
-      todayDescription: "Thank you, Professor. For everything.",
-      afterTitle: "The Professor has retired his mouse.",
-      afterDescription: "FalleN retired from competition, but his story lives on in every player he inspired.",
+      todayDescription: "Today is FalleN's retirement day. Thank you, Professor. For everything.",
+      afterEyebrow: "Legacy active",
+      afterTitle: "The Professor has retired from competition.",
+      afterDescription:
+        "FalleN has retired from competition, but he keeps strengthening the community and leaving his legacy.",
+      afterHighlights: ["The player became a reference.", "The teacher keeps teaching.", "The community carries the legacy."],
       ariaLabel: "Countdown to FalleN retirement",
       days: "Days",
       hours: "Hours",

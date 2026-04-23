@@ -1,10 +1,18 @@
 import { Countdown } from "./Countdown";
 import { ShareButtons } from "./ShareButtons";
 import { useLanguage } from "@/context/LanguageContext";
+import { resolveCountdownState } from "@/lib/countdown-state";
 
 export const Hero = () => {
   const { content } = useLanguage();
   const { heroCopy } = content;
+  const countdownState = resolveCountdownState();
+  const subhead =
+    countdownState === "today"
+      ? heroCopy.todaySubhead
+      : countdownState === "after"
+        ? heroCopy.afterSubhead
+        : heroCopy.subhead;
 
   return (
     <section
@@ -42,7 +50,7 @@ export const Hero = () => {
           className="mt-6 md:mt-8 text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed animate-slide-up"
           style={{ animationDelay: "0.2s" }}
         >
-          {heroCopy.subhead}
+          {subhead}
         </p>
 
         <div

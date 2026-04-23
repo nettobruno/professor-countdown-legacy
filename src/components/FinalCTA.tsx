@@ -1,9 +1,17 @@
 import { ShareButtons } from "./ShareButtons";
 import { RevealOnScroll } from "./RevealOnScroll";
 import { useLanguage } from "@/context/LanguageContext";
+import { resolveCountdownState } from "@/lib/countdown-state";
 
 export const FinalCTA = () => {
   const { content } = useLanguage();
+  const countdownState = resolveCountdownState();
+  const description =
+    countdownState === "today"
+      ? content.finalCta.todayDescription
+      : countdownState === "after"
+        ? content.finalCta.afterDescription
+        : content.finalCta.description;
 
   return (
     <section className="relative py-28 md:py-40 overflow-hidden">
@@ -20,7 +28,7 @@ export const FinalCTA = () => {
             </span>
           </h2>
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto">
-            {content.finalCta.description}
+            {description}
           </p>
 
           <div className="mt-12">
