@@ -58,7 +58,7 @@ export const ShareButtons = ({ variant = "inline", className }: ShareButtonsProp
 
   if (variant === "sticky") {
     return (
-      <div className={cn("flex items-stretch gap-2", className)}>
+      <div className={cn("flex w-full max-w-full min-w-0 items-stretch gap-2", className)}>
         {buttons.map((b) => (
           <a
             key={b.key}
@@ -67,12 +67,12 @@ export const ShareButtons = ({ variant = "inline", className }: ShareButtonsProp
             rel="noopener noreferrer"
             aria-label={`${content.shareText.ariaPrefix} ${b.label}`}
             className={cn(
-              "flex-1 flex items-center justify-center gap-2 py-3 rounded-lg glass text-sm font-medium transition-all duration-300",
+              "flex min-w-0 flex-1 items-center justify-center gap-2 py-3 rounded-lg glass text-sm font-medium transition-all duration-300",
               b.hover,
             )}
           >
             <b.icon className="w-4 h-4" />
-            <span className="hidden xs:inline">{b.label}</span>
+            <span className="hidden sm:inline truncate">{b.label}</span>
           </a>
         ))}
       </div>
@@ -102,20 +102,21 @@ export const ShareButtons = ({ variant = "inline", className }: ShareButtonsProp
   }
 
   return (
-    <div className={cn("flex flex-wrap items-center justify-center gap-3", className)}>
+    <div className={cn("grid w-full max-w-xs grid-cols-3 gap-3 sm:flex sm:max-w-none sm:flex-wrap sm:items-center sm:justify-center", className)}>
       {buttons.map((b) => (
         <a
           key={b.key}
           href={b.href}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`${content.shareText.ariaPrefix} ${b.label}`}
           className={cn(
-            "group flex items-center gap-2.5 px-5 py-3 rounded-full glass text-sm font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-0.5",
+            "group flex items-center justify-center gap-2.5 rounded-xl glass text-sm font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 min-w-0 aspect-square px-0 py-0 sm:aspect-auto sm:rounded-full sm:px-5 sm:py-3",
             b.hover,
           )}
         >
           <b.icon className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span>{b.label}</span>
+          <span className="hidden sm:inline">{b.label}</span>
         </a>
       ))}
     </div>
