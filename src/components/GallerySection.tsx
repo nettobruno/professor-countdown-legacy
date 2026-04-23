@@ -50,7 +50,7 @@ export const GallerySection = () => {
     >
       <div className="container relative">
         <RevealOnScroll className="max-w-3xl">
-          <span className="text-xs uppercase tracking-[0.3em] text-accent-yellow">
+          <span className="text-xs uppercase tracking-[0.3em] text-accent-green">
             {content.gallery.eyebrow}
           </span>
           <h2 className="mt-4 font-display text-5xl leading-[0.95] md:text-7xl">

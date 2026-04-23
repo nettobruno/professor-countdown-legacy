@@ -117,8 +117,8 @@ const Index = () => {
       <LegacySection />
       <TeamsSection />
       <TitlesSection />
-      <GallerySection />
       <MomentsSection />
+      <GallerySection />
       <SocialSection />
       <FinalCTA />
       <SiteFooter />

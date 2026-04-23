@@ -19,7 +19,7 @@ export const TitlesSection = () => {
     >
       <div className="container">
         <RevealOnScroll className="max-w-3xl">
-          <span className="text-xs uppercase tracking-[0.3em] text-accent-yellow">
+          <span className="text-xs uppercase tracking-[0.3em] text-accent-green">
             {content.titles.eyebrow}
           </span>
           <h2 className="mt-4 font-display text-5xl md:text-7xl leading-[0.95]">
