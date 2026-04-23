@@ -47,6 +47,8 @@ type SiteCopy = {
   heroCopy: {
     eyebrow: string;
     headline: string;
+    todayHeadline: string;
+    afterHeadline: string;
     subhead: string;
     todaySubhead: string;
     afterSubhead: string;
@@ -130,6 +132,8 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     heroCopy: {
       eyebrow: "TRIBUTO DE FÃ",
       headline: "O dia que o CS vai parar.",
+      todayHeadline: "Hoje é dia de agradecer.",
+      afterHeadline: "O legado do Professor continua.",
       subhead: "A contagem regressiva para a aposentadoria do Professor já começou.",
       todaySubhead: "Hoje o competitivo se despede do Professor, e uma comunidade inteira agradece.",
       afterSubhead: "O competitivo ficou para a história. O legado do Professor segue vivo em cada servidor.",
@@ -248,6 +252,8 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     heroCopy: {
       eyebrow: "FAN TRIBUTE",
       headline: "The day CS will stop.",
+      todayHeadline: "Today is for gratitude.",
+      afterHeadline: "The Professor's legacy lives on.",
       subhead: "The countdown to The Professor's retirement has already begun.",
       todaySubhead: "Today competitive CS says goodbye to The Professor, and a whole community says thank you.",
       afterSubhead: "Competition became history. The Professor's legacy keeps living on every server.",

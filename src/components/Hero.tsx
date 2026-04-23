@@ -7,6 +7,12 @@ export const Hero = () => {
   const { content } = useLanguage();
   const { heroCopy } = content;
   const countdownState = resolveCountdownState();
+  const headline =
+    countdownState === "today"
+      ? heroCopy.todayHeadline
+      : countdownState === "after"
+        ? heroCopy.afterHeadline
+        : heroCopy.headline;
   const subhead =
     countdownState === "today"
       ? heroCopy.todaySubhead
@@ -43,7 +49,7 @@ export const Hero = () => {
         </div>
 
         <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] leading-[0.9] max-w-5xl animate-slide-up">
-          {heroCopy.headline}
+          {headline}
         </h1>
 
         <p
