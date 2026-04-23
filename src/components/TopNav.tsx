@@ -22,9 +22,14 @@ export const TopNav = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#top" className="flex items-baseline gap-1.5 group">
+        <a href="#top" className="flex items-center gap-1 group">
           <span className="font-display text-2xl md:text-3xl tracking-wider">FalleN</span>
-          <span className="text-accent-green text-xl md:text-2xl transition-transform group-hover:rotate-12">∞</span>
+          <img
+            src="/bad-fallen.png"
+            alt=""
+            aria-hidden="true"
+            className="h-8 w-8 object-contain transition-transform duration-300 group-hover:rotate-12 md:h-10 md:w-10"
+          />
         </a>
 
         {content.nav.links.length > 0 && (

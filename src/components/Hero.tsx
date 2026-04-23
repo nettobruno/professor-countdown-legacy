@@ -41,12 +41,6 @@ export const Hero = () => {
       />
 
       <div className="container relative z-10 flex flex-col items-center text-center">
-        <div className="animate-fade-in">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
-            {heroCopy.eyebrow}
-          </span>
-        </div>
 
         <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] leading-[0.9] max-w-5xl animate-slide-up">
           {headline}
