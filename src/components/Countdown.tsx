@@ -50,7 +50,6 @@ const calc = (target: Date, previewState: CountdownPreviewState): { state: State
 const Digit = ({ value, label }: { value: number; label: string }) => {
   const [prev, setPrev] = useState(value);
   const [animating, setAnimating] = useState(false);
-  const hasThreeDigits = value > 99;
 
   useEffect(() => {
     if (value !== prev) {
@@ -71,13 +70,7 @@ const Digit = ({ value, label }: { value: number; label: string }) => {
             animating ? "tick" : ""
           }`}
         >
-          <span
-            className={`font-display text-foreground tabular-nums leading-none ${
-              hasThreeDigits
-                ? "text-4xl sm:text-5xl md:text-7xl lg:text-8xl"
-                : "text-5xl md:text-7xl lg:text-8xl"
-            }`}
-          >
+          <span className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground tabular-nums leading-none">
             {String(value).padStart(2, "0")}
           </span>
         </div>
