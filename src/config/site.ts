@@ -25,6 +25,14 @@ type IconicMoment = {
   description: string;
 };
 
+type GalleryPhoto = {
+  src: string;
+  alt: string;
+  title: string;
+  caption: string;
+  credit?: string;
+};
+
 type SiteCopy = {
   seo: {
     title: string;
@@ -74,6 +82,13 @@ type SiteCopy = {
     title: string;
     intro: string;
     list: IconicMoment[];
+  };
+  gallery: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    emptyHint: string;
+    photos: GalleryPhoto[];
   };
   social: {
     eyebrow: string;
@@ -197,6 +212,52 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
         { youtubeId: "dQw4w9WgXcQ", title: "Belo Horizonte — Em casa", description: "Diante da torcida brasileira, o triunfo eterno." },
       ],
     },
+    gallery: {
+      eyebrow: "04 — Galeria",
+      title: "Fotos do FalleN.",
+      intro:
+        "Um mural visual para guardar fases, palcos e lembranças do Professor.",
+      emptyHint:
+        "Adicione uma foto em public/gallery com este nome para preencher o cartão.",
+      photos: [
+        {
+          src: "/gallery/fallen-palco.jpg",
+          alt: "FalleN em um palco competitivo de Counter-Strike",
+          title: "No palco",
+          caption: "A presença de quem carregou uma geração inteira.",
+        },
+        {
+          src: "/gallery/fallen-torcida.jpg",
+          alt: "FalleN com a torcida brasileira",
+          title: "Com a torcida",
+          caption: "O encontro entre o Professor e quem nunca parou de acreditar.",
+        },
+        {
+          src: "/gallery/fallen-trofeu.jpg",
+          alt: "FalleN celebrando uma conquista",
+          title: "Dia de troféu",
+          caption: "Quando o trabalho virou história para o CS brasileiro.",
+        },
+        {
+          src: "/gallery/fallen-time.jpg",
+          alt: "FalleN ao lado de companheiros de equipe",
+          title: "Ao lado do time",
+          caption: "Liderança também é fazer todo mundo jogar melhor.",
+        },
+        {
+          src: "/gallery/fallen-awp.jpg",
+          alt: "FalleN jogando com a AWP",
+          title: "A AWP do Professor",
+          caption: "O símbolo de tantos rounds impossíveis.",
+        },
+        {
+          src: "/gallery/fallen-fans.jpg",
+          alt: "FalleN em momento próximo aos fãs",
+          title: "Perto dos fãs",
+          caption: "Um legado que sempre foi maior que o servidor.",
+        },
+      ],
+    },
     social: { eyebrow: "Acompanhe o Professor", title: "Canais oficiais" },
     finalCta: {
       titleLine1: "Marca aquele amigo",
@@ -302,6 +363,52 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
         { youtubeId: "dQw4w9WgXcQ", title: "The call that changed history", description: "Leadership in its purest form." },
         { youtubeId: "dQw4w9WgXcQ", title: "Cologne 2016 — Back-to-back", description: "The coronation of a golden generation." },
         { youtubeId: "dQw4w9WgXcQ", title: "Belo Horizonte — At home", description: "In front of the Brazilian crowd, an eternal triumph." },
+      ],
+    },
+    gallery: {
+      eyebrow: "04 — Gallery",
+      title: "Photos of FalleN.",
+      intro:
+        "A visual wall for the stages, eras, and memories of The Professor.",
+      emptyHint:
+        "Add a photo in public/gallery with this filename to fill the card.",
+      photos: [
+        {
+          src: "/gallery/fallen-palco.jpg",
+          alt: "FalleN on a competitive Counter-Strike stage",
+          title: "On stage",
+          caption: "The presence of someone who carried a whole generation.",
+        },
+        {
+          src: "/gallery/fallen-torcida.jpg",
+          alt: "FalleN with Brazilian fans",
+          title: "With the crowd",
+          caption: "The meeting between The Professor and those who never stopped believing.",
+        },
+        {
+          src: "/gallery/fallen-trofeu.jpg",
+          alt: "FalleN celebrating an achievement",
+          title: "Trophy day",
+          caption: "When the work became history for Brazilian CS.",
+        },
+        {
+          src: "/gallery/fallen-time.jpg",
+          alt: "FalleN next to teammates",
+          title: "With the team",
+          caption: "Leadership also means making everyone play better.",
+        },
+        {
+          src: "/gallery/fallen-awp.jpg",
+          alt: "FalleN playing with the AWP",
+          title: "The Professor's AWP",
+          caption: "The symbol of so many impossible rounds.",
+        },
+        {
+          src: "/gallery/fallen-fans.jpg",
+          alt: "FalleN in a moment close to fans",
+          title: "Close to fans",
+          caption: "A legacy that was always bigger than the server.",
+        },
       ],
     },
     social: { eyebrow: "Follow The Professor", title: "Official channels" },

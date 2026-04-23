@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { ShareStrip } from "@/components/ShareStrip";
 import { LegacySection } from "@/components/LegacySection";
 import { TitlesSection } from "@/components/TitlesSection";
+import { GallerySection } from "@/components/GallerySection";
 import { MomentsSection } from "@/components/MomentsSection";
 import { SocialSection } from "@/components/SocialSection";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -114,6 +115,7 @@ const Index = () => {
       <ShareStrip />
       <LegacySection />
       <TitlesSection />
+      <GallerySection />
       <MomentsSection />
       <SocialSection />
       <FinalCTA />
