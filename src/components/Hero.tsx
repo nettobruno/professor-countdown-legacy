@@ -61,14 +61,14 @@ export const Hero = () => {
           </p>
           <ShareButtons />
         </div>
-      </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground/60">
-        <span className="text-[10px] uppercase tracking-[0.3em]">
-          {heroCopy.continueLabel}
-        </span>
-        <div className="w-px h-12 bg-gradient-to-b from-muted-foreground/60 to-transparent" />
+        {/* Scroll cue */}
+        <div className="mt-10 hidden md:flex flex-col items-center gap-2 text-muted-foreground/60">
+          <span className="text-[10px] uppercase tracking-[0.3em]">
+            {heroCopy.continueLabel}
+          </span>
+          <div className="w-px h-12 bg-gradient-to-b from-muted-foreground/60 to-transparent" />
+        </div>
       </div>
     </section>
   );

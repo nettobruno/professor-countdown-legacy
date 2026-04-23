@@ -27,17 +27,19 @@ export const TopNav = () => {
           <span className="text-accent-green text-xl md:text-2xl transition-transform group-hover:rotate-12">∞</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {content.nav.links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-            >
-              {l.label}
-            </a>
-          ))}
-        </nav>
+        {content.nav.links.length > 0 && (
+          <nav className="hidden md:flex items-center gap-8">
+            {content.nav.links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        )}
 
         <div className="flex items-center gap-2">
           <button

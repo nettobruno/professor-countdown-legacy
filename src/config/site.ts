@@ -98,11 +98,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       siteName: "FalleN ∞ — Tributo de Fã",
     },
     nav: {
-      links: [
-        { href: "#historia", label: "História" },
-        { href: "#conquistas", label: "Conquistas" },
-        { href: "#momentos", label: "Momentos" },
-      ],
+      links: [],
       switchLabel: "Idioma",
     },
     shareText: {
@@ -210,11 +206,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       siteName: "FalleN ∞ — Fan Tribute",
     },
     nav: {
-      links: [
-        { href: "#historia", label: "Story" },
-        { href: "#conquistas", label: "Titles" },
-        { href: "#momentos", label: "Moments" },
-      ],
+      links: [],
       switchLabel: "Language",
     },
     shareText: {
