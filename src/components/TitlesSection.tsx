@@ -96,9 +96,11 @@ export const TitlesSection = () => {
           })}
         </div>
 
-        <p className="mt-10 text-center text-xs text-muted-foreground/70 italic max-w-xl mx-auto">
-          {content.titles.footnote}
-        </p>
+        {content.titles.footnote && (
+          <p className="mt-10 text-center text-xs text-muted-foreground/70 italic max-w-xl mx-auto">
+            {content.titles.footnote}
+          </p>
+        )}
       </div>
     </section>
   );

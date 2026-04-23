@@ -3,6 +3,7 @@ import { TopNav } from "@/components/TopNav";
 import { Hero } from "@/components/Hero";
 import { ShareStrip } from "@/components/ShareStrip";
 import { LegacySection } from "@/components/LegacySection";
+import { TeamsSection } from "@/components/TeamsSection";
 import { TitlesSection } from "@/components/TitlesSection";
 import { GallerySection } from "@/components/GallerySection";
 import { MomentsSection } from "@/components/MomentsSection";
@@ -114,6 +115,7 @@ const Index = () => {
       <Hero />
       <ShareStrip />
       <LegacySection />
+      <TeamsSection />
       <TitlesSection />
       <GallerySection />
       <MomentsSection />

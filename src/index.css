@@ -195,4 +195,24 @@
   .animate-marquee {
     animation: marquee 40s linear infinite;
   }
+
+  .animate-marquee-slow {
+    animation: marquee 34s linear infinite;
+    will-change: transform;
+  }
+
+  .group:hover .animate-marquee-slow {
+    animation-play-state: paused;
+  }
+
+  .team-logo-card:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: translateY(-2px) scale(1.03);
+  }
+
+  .team-logo-card:hover > div {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
 }

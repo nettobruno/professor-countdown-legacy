@@ -74,7 +74,7 @@ type SiteCopy = {
     eyebrow: string;
     title: string;
     intro: string;
-    footnote: string;
+    footnote?: string;
     tournaments: Tournament[];
   };
   moments: {
@@ -186,11 +186,11 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       ],
     },
     titles: {
-      eyebrow: "02 — Conquistas",
+      eyebrow: "03 — Conquistas",
       title: "Troféus que viraram história.",
       intro:
         "Lista curada por fãs com base em conquistas competitivas públicas. Cada linha aqui foi celebrada por um país inteiro.",
-      footnote: "* Lista curada por fãs. Edite em src/config/site.ts para adicionar conquistas verificadas.",
+      footnote: "",
       tournaments: [
         { event: "MLG Major Championship: Columbus", year: 2016, category: "Major", result: "🏆 Campeão", description: "Primeiro título de Major de uma equipe brasileira na era CS:GO." },
         { event: "ESL One Cologne", year: 2016, category: "Major", result: "🏆 Campeão", description: "Bicampeonato de Majors consecutivos com a SK Gaming." },
@@ -200,7 +200,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       ],
     },
     moments: {
-      eyebrow: "03 — Momentos",
+      eyebrow: "04 — Momentos",
       title: "Cenas que ficaram pra sempre.",
       intro: "Os clutches, os calls, os gritos. A coletânea que arrepia toda vez.",
       list: [
@@ -213,7 +213,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       ],
     },
     gallery: {
-      eyebrow: "04 — Galeria",
+      eyebrow: "05 — Galeria",
       title: "Fotos do FalleN.",
       intro:
         "Um mural visual para guardar fases, palcos e lembranças do Professor.",
@@ -340,10 +340,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       ],
     },
     titles: {
-      eyebrow: "02 — Achievements",
+      eyebrow: "03 — Achievements",
       title: "Trophies that became history.",
       intro: "Fan-curated list based on public competitive wins. Every line here was celebrated by a whole country.",
-      footnote: "* Fan-curated list. Edit src/config/site.ts to add verified achievements.",
+      footnote: "",
       tournaments: [
         { event: "MLG Major Championship: Columbus", year: 2016, category: "Major", result: "🏆 Champion", description: "First CS:GO Major title for a Brazilian team." },
         { event: "ESL One Cologne", year: 2016, category: "Major", result: "🏆 Champion", description: "Back-to-back Majors with SK Gaming." },
@@ -353,7 +353,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       ],
     },
     moments: {
-      eyebrow: "03 — Moments",
+      eyebrow: "04 — Moments",
       title: "Scenes that lasted forever.",
       intro: "The clutches, the calls, the screams. A compilation that gives chills every time.",
       list: [
@@ -366,7 +366,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       ],
     },
     gallery: {
-      eyebrow: "04 — Gallery",
+      eyebrow: "05 — Gallery",
       title: "Photos of FalleN.",
       intro:
         "A visual wall for the stages, eras, and memories of The Professor.",
