@@ -1,10 +1,12 @@
-import { tournaments } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 import { RevealOnScroll } from "./RevealOnScroll";
 import { Trophy } from "lucide-react";
 
 export const TitlesSection = () => {
+  const { content } = useLanguage();
+
   // Sort: Majors first, then by year desc
-  const sorted = [...tournaments].sort((a, b) => {
+  const sorted = [...content.titles.tournaments].sort((a, b) => {
     if (a.category === "Major" && b.category !== "Major") return -1;
     if (b.category === "Major" && a.category !== "Major") return 1;
     return b.year - a.year;
@@ -18,14 +20,13 @@ export const TitlesSection = () => {
       <div className="container">
         <RevealOnScroll className="max-w-3xl">
           <span className="text-xs uppercase tracking-[0.3em] text-accent-yellow">
-            02 — Conquistas
+            {content.titles.eyebrow}
           </span>
           <h2 className="mt-4 font-display text-5xl md:text-7xl leading-[0.95]">
-            Troféus que viraram história.
+            {content.titles.title}
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Lista curada por fãs com base em conquistas competitivas públicas.
-            Cada linha aqui foi celebrada por um país inteiro.
+            {content.titles.intro}
           </p>
         </RevealOnScroll>
 
@@ -96,9 +97,7 @@ export const TitlesSection = () => {
         </div>
 
         <p className="mt-10 text-center text-xs text-muted-foreground/70 italic max-w-xl mx-auto">
-          * Lista curada por fãs. Edite em{" "}
-          <code className="text-foreground/60">src/config/site.ts</code> para
-          adicionar conquistas verificadas.
+          {content.titles.footnote}
         </p>
       </div>
     </section>

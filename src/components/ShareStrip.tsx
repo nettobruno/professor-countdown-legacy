@@ -1,12 +1,13 @@
-import { shareLines } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const ShareStrip = () => {
+  const { content } = useLanguage();
   // Duplicate for seamless marquee
-  const items = [...shareLines, ...shareLines];
+  const items = [...content.shareLines, ...content.shareLines];
 
   return (
     <section
-      aria-label="Frases compartilháveis"
+      aria-label={content.shareStripAria}
       className="relative py-10 md:py-14 border-y border-border/60 bg-surface-elevated/40 overflow-hidden"
     >
       <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />

@@ -1,4 +1,5 @@
 import { socialLinks } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 import { RevealOnScroll } from "./RevealOnScroll";
 import { Youtube, Instagram, Twitch, ExternalLink } from "lucide-react";
 
@@ -16,15 +17,17 @@ const items = [
 ];
 
 export const SocialSection = () => {
+  const { content } = useLanguage();
+
   return (
     <section className="relative py-20 md:py-28 bg-surface-elevated/30 border-y border-border/60">
       <div className="container">
         <RevealOnScroll className="text-center max-w-2xl mx-auto">
           <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Acompanhe o Professor
+            {content.social.eyebrow}
           </span>
           <h2 className="mt-3 font-display text-4xl md:text-5xl">
-            Canais oficiais
+            {content.social.title}
           </h2>
         </RevealOnScroll>
 

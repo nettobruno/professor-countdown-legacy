@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import { ShareButtons } from "./ShareButtons";
-
-const links = [
-  { href: "#historia", label: "História" },
-  { href: "#conquistas", label: "Conquistas" },
-  { href: "#momentos", label: "Momentos" },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export const TopNav = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { content, locale, setLocale } = useLanguage();
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
@@ -26,16 +23,12 @@ export const TopNav = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-baseline gap-1.5 group">
-          <span className="font-display text-2xl md:text-3xl tracking-wider">
-            FalleN
-          </span>
-          <span className="text-accent-green text-xl md:text-2xl transition-transform group-hover:rotate-12">
-            ∞
-          </span>
+          <span className="font-display text-2xl md:text-3xl tracking-wider">FalleN</span>
+          <span className="text-accent-green text-xl md:text-2xl transition-transform group-hover:rotate-12">∞</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
+          {content.nav.links.map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -46,7 +39,17 @@ export const TopNav = () => {
           ))}
         </nav>
 
-        <ShareButtons variant="compact" className="hidden sm:flex" />
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setLocale(locale === "pt-BR" ? "en" : "pt-BR")}
+            aria-label={content.nav.switchLabel}
+            className="px-3 py-2 text-xs md:text-sm rounded-full glass hover:border-accent-green/50 transition-colors"
+          >
+            {locale === "pt-BR" ? "EN" : "PT"}
+          </button>
+          <ShareButtons variant="compact" className="hidden sm:flex" />
+        </div>
       </div>
     </header>
   );
