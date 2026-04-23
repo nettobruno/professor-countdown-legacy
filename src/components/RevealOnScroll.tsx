@@ -1,4 +1,4 @@
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, ReactNode, createElement } from "react";
 import { cn } from "@/lib/utils";
 
 interface RevealOnScrollProps {
@@ -12,9 +12,9 @@ export const RevealOnScroll = ({
   children,
   className,
   delay = 0,
-  as: Tag = "div",
+  as = "div",
 }: RevealOnScrollProps) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -34,10 +34,9 @@ export const RevealOnScroll = ({
     return () => observer.disconnect();
   }, [delay]);
 
-  // @ts-expect-error dynamic tag
-  return (
-    <Tag ref={ref} className={cn("reveal", className)}>
-      {children}
-    </Tag>
+  return createElement(
+    as,
+    { ref, className: cn("reveal", className) },
+    children,
   );
 };
