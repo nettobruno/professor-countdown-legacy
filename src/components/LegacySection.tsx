@@ -1,7 +1,9 @@
-import { legacyBlocks } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 import { RevealOnScroll } from "./RevealOnScroll";
 
 export const LegacySection = () => {
+  const { content } = useLanguage();
+
   return (
     <section
       id="historia"
@@ -12,19 +14,18 @@ export const LegacySection = () => {
       <div className="container relative">
         <RevealOnScroll className="max-w-3xl">
           <span className="text-xs uppercase tracking-[0.3em] text-accent-green">
-            01 — Legado
+            {content.legacy.eyebrow}
           </span>
           <h2 className="mt-4 font-display text-5xl md:text-7xl leading-[0.95]">
-            A história do Professor.
+            {content.legacy.title}
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Gabriel "FalleN" Toledo não é só um nome. É um capítulo inteiro do
-            Counter-Strike brasileiro — escrito a base de suor, fé e AWP.
+            {content.legacy.intro}
           </p>
         </RevealOnScroll>
 
         <article className="mt-16 md:mt-24 grid gap-10 md:gap-14 md:grid-cols-2 max-w-5xl">
-          {legacyBlocks.map((block, i) => (
+          {content.legacy.blocks.map((block, i) => (
             <RevealOnScroll key={block.title} delay={i * 100}>
               <div className="group">
                 <div className="flex items-center gap-3 mb-4">

@@ -1,8 +1,11 @@
 import { Countdown } from "./Countdown";
 import { ShareButtons } from "./ShareButtons";
-import { heroCopy } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const Hero = () => {
+  const { content } = useLanguage();
+  const { heroCopy } = content;
+
   return (
     <section
       id="top"
@@ -54,7 +57,7 @@ export const Hero = () => {
           style={{ animationDelay: "0.6s" }}
         >
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
-            Compartilhe esta homenagem
+            {heroCopy.shareLabel}
           </p>
           <ShareButtons />
         </div>
@@ -63,7 +66,7 @@ export const Hero = () => {
       {/* Scroll cue */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground/60">
         <span className="text-[10px] uppercase tracking-[0.3em]">
-          Continue
+          {heroCopy.continueLabel}
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-muted-foreground/60 to-transparent" />
       </div>

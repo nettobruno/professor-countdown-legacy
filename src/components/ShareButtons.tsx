@@ -1,20 +1,6 @@
-import { shareText, seo } from "@/config/site";
+import { localizedSiteContent } from "@/config/site";
 import { cn } from "@/lib/utils";
-
-const url = typeof window !== "undefined" ? window.location.href : seo.canonical;
-
-const links = {
-  whatsapp: () =>
-    `https://wa.me/?text=${encodeURIComponent(`${shareText.whatsapp} ${url}`)}`,
-  twitter: () =>
-    `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      shareText.twitter,
-    )}&url=${encodeURIComponent(url)}`,
-  reddit: () =>
-    `https://www.reddit.com/submit?url=${encodeURIComponent(
-      url,
-    )}&title=${encodeURIComponent(shareText.redditTitle)}`,
-};
+import { useLanguage } from "@/context/LanguageContext";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
@@ -39,29 +25,32 @@ interface ShareButtonsProps {
   className?: string;
 }
 
-export const ShareButtons = ({
-  variant = "inline",
-  className,
-}: ShareButtonsProps) => {
+export const ShareButtons = ({ variant = "inline", className }: ShareButtonsProps) => {
+  const { content } = useLanguage();
+  const url =
+    typeof window !== "undefined"
+      ? window.location.href
+      : localizedSiteContent["pt-BR"].seo.canonical;
+
   const buttons = [
     {
       key: "whatsapp",
       label: "WhatsApp",
-      href: links.whatsapp(),
+      href: `https://wa.me/?text=${encodeURIComponent(`${content.shareText.whatsapp} ${url}`)}`,
       icon: WhatsAppIcon,
       hover: "hover:bg-accent-green hover:text-primary-foreground",
     },
     {
       key: "twitter",
       label: "X / Twitter",
-      href: links.twitter(),
+      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(content.shareText.twitter)}&url=${encodeURIComponent(url)}`,
       icon: XIcon,
       hover: "hover:bg-foreground hover:text-background",
     },
     {
       key: "reddit",
       label: "Reddit",
-      href: links.reddit(),
+      href: `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(content.shareText.redditTitle)}`,
       icon: RedditIcon,
       hover: "hover:bg-accent-yellow hover:text-secondary-foreground",
     },
@@ -76,7 +65,7 @@ export const ShareButtons = ({
             href={b.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Compartilhar no ${b.label}`}
+            aria-label={`${content.shareText.ariaPrefix} ${b.label}`}
             className={cn(
               "flex-1 flex items-center justify-center gap-2 py-3 rounded-lg glass text-sm font-medium transition-all duration-300",
               b.hover,
@@ -99,7 +88,7 @@ export const ShareButtons = ({
             href={b.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Compartilhar no ${b.label}`}
+            aria-label={`${content.shareText.ariaPrefix} ${b.label}`}
             className={cn(
               "w-10 h-10 flex items-center justify-center rounded-full glass transition-all duration-300",
               b.hover,
@@ -113,12 +102,7 @@ export const ShareButtons = ({
   }
 
   return (
-    <div
-      className={cn(
-        "flex flex-wrap items-center justify-center gap-3",
-        className,
-      )}
-    >
+    <div className={cn("flex flex-wrap items-center justify-center gap-3", className)}>
       {buttons.map((b) => (
         <a
           key={b.key}

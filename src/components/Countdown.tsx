@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { retirementDate } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 
 type TimeLeft = {
   days: number;
@@ -72,6 +73,7 @@ const Digit = ({ value, label }: { value: number; label: string }) => {
 };
 
 export const Countdown = () => {
+  const { content } = useLanguage();
   const target = new Date(retirementDate);
   const [{ state, t }, setData] = useState(() => calc(target));
 
@@ -84,10 +86,10 @@ export const Countdown = () => {
     return (
       <div className="text-center max-w-2xl mx-auto py-8">
         <p className="font-display text-4xl md:text-6xl text-accent-green text-glow-green">
-          Hoje é o dia.
+          {content.countdown.todayTitle}
         </p>
         <p className="mt-4 text-base md:text-lg text-muted-foreground">
-          Obrigado, Professor. Por tudo. O Brasil inteiro tá com você.
+          {content.countdown.todayDescription}
         </p>
       </div>
     );
@@ -97,11 +99,10 @@ export const Countdown = () => {
     return (
       <div className="text-center max-w-2xl mx-auto py-8">
         <p className="font-display text-3xl md:text-5xl text-foreground">
-          O Professor pendurou o mouse.
+          {content.countdown.afterTitle}
         </p>
         <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-          FalleN se aposentou do competitivo, mas sua história continua viva em
-          cada player que ele inspirou.
+          {content.countdown.afterDescription}
         </p>
       </div>
     );
@@ -111,12 +112,12 @@ export const Countdown = () => {
     <time
       dateTime={retirementDate}
       className="grid grid-cols-4 gap-2 md:gap-4 max-w-3xl mx-auto"
-      aria-label="Contagem regressiva para a aposentadoria do FalleN"
+      aria-label={content.countdown.ariaLabel}
     >
-      <Digit value={t.days} label="Dias" />
-      <Digit value={t.hours} label="Horas" />
-      <Digit value={t.minutes} label="Min" />
-      <Digit value={t.seconds} label="Seg" />
+      <Digit value={t.days} label={content.countdown.days} />
+      <Digit value={t.hours} label={content.countdown.hours} />
+      <Digit value={t.minutes} label={content.countdown.minutes} />
+      <Digit value={t.seconds} label={content.countdown.seconds} />
     </time>
   );
 };
