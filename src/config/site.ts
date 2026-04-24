@@ -4,11 +4,13 @@ export type CountdownPreviewState = "auto" | "before" | "today" | "after";
 export const retirementDate = "2026-12-20T23:59:59-03:00";
 
 export const socialLinks = {
-  youtube: "https://www.youtube.com/@fallen",
+  youtube: "https://www.youtube.com/channel/UCZhYB1iqqaL2gUvs452yvsg",
+  youtube2: "https://www.youtube.com/channel/UC-6e_TqEJw1ftKtstE-qSzQ",
   instagram: "https://www.instagram.com/fallen/",
   twitter: "https://x.com/FalleNCS",
   twitch: "https://www.twitch.tv/gafallen",
-  hltv: "https://www.hltv.org/player/2730/fallen",
+  hltv: "https://www.hltv.org/player/2023/fallen",
+  fallenstore: "https://www.fallenstore.com.br/",
 };
 
 type Tournament = {

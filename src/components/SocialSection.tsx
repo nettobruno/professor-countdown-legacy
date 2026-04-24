@@ -1,10 +1,11 @@
 import { socialLinks } from "@/config/site";
 import { useLanguage } from "@/context/LanguageContext";
 import { RevealOnScroll } from "./RevealOnScroll";
-import { Youtube, Instagram, Twitch, ExternalLink } from "lucide-react";
+import { Youtube, Instagram, Twitch, ExternalLink, ShoppingBag } from "lucide-react";
 
 const items = [
-  { key: "youtube", label: "YouTube", url: socialLinks.youtube, Icon: Youtube },
+  { key: "youtube", label: "fallenINSIDER", url: socialLinks.youtube, Icon: Youtube },
+  {key: "youtube2", label: "ProfessorFALLEN", url: socialLinks.youtube2, Icon: Youtube },
   {
     key: "instagram",
     label: "Instagram",
@@ -14,6 +15,7 @@ const items = [
   { key: "twitter", label: "X / Twitter", url: socialLinks.twitter, Icon: ExternalLink },
   { key: "twitch", label: "Twitch", url: socialLinks.twitch, Icon: Twitch },
   { key: "hltv", label: "HLTV", url: socialLinks.hltv, Icon: ExternalLink },
+  { key: "fallenstore", label: "Fallen Store", url: socialLinks.fallenstore, Icon: ShoppingBag },
 ];
 
 export const SocialSection = () => {
