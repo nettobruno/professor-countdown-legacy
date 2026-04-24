@@ -1,7 +1,7 @@
 export type Locale = "pt-BR" | "en";
 export type CountdownPreviewState = "auto" | "before" | "today" | "after";
 
-export const retirementDate = "2026-12-31T23:59:59-03:00";
+export const retirementDate = "2026-12-20T23:59:59-03:00";
 
 export const socialLinks = {
   youtube: "https://www.youtube.com/@fallen",
@@ -9,6 +9,7 @@ export const socialLinks = {
   twitter: "https://x.com/FalleNCS",
   twitch: "https://www.twitch.tv/gafallen",
   hltv: "https://www.hltv.org/player/2730/fallen",
+  hldddtv: "https://www.hltv.org/player/2730/fallen",
 };
 
 type Tournament = {
