@@ -9,7 +9,6 @@ export const socialLinks = {
   twitter: "https://x.com/FalleNCS",
   twitch: "https://www.twitch.tv/gafallen",
   hltv: "https://www.hltv.org/player/2730/fallen",
-  hldddtv: "https://www.hltv.org/player/2730/fallen",
 };
 
 type Tournament = {
@@ -147,10 +146,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     heroCopy: {
       eyebrow: "TRIBUTO DE FÃ",
-      headline: "O dia que o CS vai parar.",
+      headline: "O fim de uma era no Counter-Strike",
       todayHeadline: "Hoje é dia de agradecer.",
       afterHeadline: "O legado do Professor continua.",
-      subhead: "A contagem regressiva para a aposentadoria do Professor já começou.",
+      subhead: "O cenário competitivo já vive a contagem regressiva para a despedida do Professor.",
       todaySubhead: "Hoje o competitivo se despede do Professor, e uma comunidade inteira agradece.",
       afterSubhead: "O competitivo ficou para a história. O legado do Professor segue vivo em cada servidor.",
       shareLabel: "Compartilhe esta homenagem",
@@ -166,23 +165,23 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       eyebrow: "01 — Legado",
       title: "A história do Professor.",
       intro:
-        'Gabriel "FalleN" Toledo não é só um nome. É um capítulo inteiro do Counter-Strike brasileiro — escrito a base de suor, fé e AWP.',
+        'Gabriel "FalleN" Toledo não é só um nome. É um capítulo inteiro do Counter-Strike brasileiro, escrito a base de suor, fé e AWP.',
       blocks: [
         {
           title: "Origens",
-          body: "Antes dos majors, antes das luzes da arena, antes do título de Professor, existia apenas um garoto de São Paulo apaixonado por Counter-Strike. Gabriel Toledo construiu sua carreira na base do esforço bruto, treinando madrugadas inteiras numa época em que ser pro player no Brasil parecia coisa de filme. Ele acreditou quando quase ninguém acreditava — e essa fé contagiou um país inteiro.",
+          body: "Antes dos Majors, antes das luzes da arena, antes do título de Professor, existia apenas um garoto do interior de São Paulo apaixonado por Counter-Strike. Gabriel Toledo construiu sua carreira com esforço bruto, treinando madrugadas inteiras em uma época em que ser pro player no Brasil parecia coisa de filme. Ele acreditou quando quase ninguém acreditava, e essa fé acabou contagiando um país inteiro.",
         },
         {
           title: "O Professor",
-          body: "O apelido não veio à toa. FalleN nunca foi apenas um AWPer cirúrgico — ele foi um educador. Da Games Academy aos vídeos didáticos no YouTube, ele abriu portas que estavam trancadas há anos. Ensinou táticas, ensinou postura, ensinou que dava pra sonhar grande falando português. Cada player brasileiro que pisou num palco internacional carrega uma parte do que o Professor plantou.",
+          body: "O apelido não veio por acaso. FalleN nunca foi apenas um AWPer preciso, foi um verdadeiro formador de talentos. Da Games Academy aos vídeos didáticos no YouTube, ele abriu portas que estavam fechadas há anos. Ensinou tática, postura e, principalmente, que era possível sonhar grande falando português. Cada jogador brasileiro que já pisou em um palco internacional carrega um pouco do que o Professor ajudou a construir.",
         },
         {
           title: "Liderança",
-          body: "Como IGL da lendária era SK/Luminosity, FalleN comandou uma das maiores caminhadas da história do Counter-Strike. Foram dois Majors consecutivos — MLG Columbus 2016 e ESL One Cologne 2016 — que mudaram para sempre a forma como o mundo enxerga o CS brasileiro. Mas mais do que troféus, ficou a postura: humildade nas vitórias, dignidade nas derrotas, e a certeza de que liderar é também servir.",
+          body: "Como IGL da lendária era SK e Luminosity, FalleN liderou uma das maiores trajetórias da história do Counter-Strike. Foram dois Majors consecutivos, MLG Columbus 2016 e ESL One Cologne 2016, conquistas que mudaram para sempre a forma como o mundo enxerga o CS brasileiro. Mais do que os troféus, porém, ficou o exemplo: humildade nas vitórias, dignidade nas derrotas e a certeza de que liderar também é servir.",
         },
         {
           title: "Legado",
-          body: "Falar de FalleN é falar de uma geração inteira. É lembrar do grito no clutch, do call certeiro, da AWP que parecia ter olhos. É lembrar que, num esporte dominado por europeus e americanos, um brasileiro chegou ao topo e ainda puxou outros junto. Quando o Professor finalmente pendurar o mouse competitivo, o cenário não fica órfão — fica eterno. Porque cada novo talento que surge daqui nasce, de alguma forma, da semente que ele plantou.",
+          body: "Falar de FalleN é falar de uma geração inteira. É lembrar do grito no clutch, do call preciso, da AWP que parecia enxergar além. É reconhecer que, em um cenário dominado por europeus e norte-americanos, um brasileiro chegou ao topo e ainda levou outros com ele. Quando o Professor finalmente pendurar o mouse competitivo, o cenário não ficará órfão, se tornará eterno. Porque cada novo talento que surge por aqui carrega, de alguma forma, a semente que ele plantou.",
         },
       ],
     },
@@ -263,7 +262,6 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     finalCta: {
       titleLine1: "Marca aquele amigo",
       titleHighlight: "que aprendeu CS com o Professor.",
-      description: "Essa contagem regressiva merece chegar em todo brasileiro que um dia sonhou de mouse na mão.",
       todayDescription:
         "Hoje a homenagem é sobre agradecer. Envie para quem viveu essa história junto com você.",
       afterDescription:
