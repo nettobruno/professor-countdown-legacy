@@ -312,7 +312,7 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     heroCopy: {
       eyebrow: "FAN TRIBUTE",
-      headline: "The end of a Counter-Strike era.",
+      headline: "The end of a Counter-Strike era",
       todayHeadline: "Today is for gratitude.",
       afterHeadline: "The Professor's legacy lives on.",
       subhead: "The competitive scene is already counting down to the Professor’s farewell.",
