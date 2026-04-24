@@ -24,7 +24,6 @@ type Tournament = {
 type IconicMoment = {
   youtubeId: string;
   title: string;
-  description: string;
 };
 
 type GalleryPhoto = {
@@ -206,12 +205,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       title: "Cenas que ficaram pra sempre.",
       intro: "Os clutches, os calls, os gritos. A coletânea que arrepia toda vez.",
       list: [
-        { youtubeId: "dQw4w9WgXcQ", title: "A AWP que parou o mundo", description: "Um dos clutches mais marcantes da carreira do Professor." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Columbus 2016 — O grito de campeão", description: "O momento em que o Brasil chegou ao topo do CS mundial." },
-        { youtubeId: "dQw4w9WgXcQ", title: "1v4 inesquecível", description: "Quando ninguém mais acreditava, ele acreditou." },
-        { youtubeId: "dQw4w9WgXcQ", title: "O call que virou a história", description: "Liderança em sua forma mais pura." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Cologne 2016 — Bicampeonato", description: "A consagração de uma geração dourada." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Belo Horizonte — Em casa", description: "Diante da torcida brasileira, o triunfo eterno." },
+        { youtubeId: "poTRUphIZyQ", title: "Jogadas que marcaram a carreira do Fallen"},
+        { youtubeId: "ovtpt9Wpfmo", title: "SK Gaming - The Dream"},
+        { youtubeId: "LMx9uzgqklg", title: "A Verdadeira História de FalleN no CS"},
+        { youtubeId: "TC6N1zHvXpU", title: "CS:GO - SK vs. Liquid [Cbble] Map 2 - ESL One Cologne 2016 - Grand Final"},
+        { youtubeId: "rAtxv1Z_w-c", title: "O MILAGRE DE FALLEN!🔥 FURIA x NAVI - StarLadder Budapest Major"},
+        { youtubeId: "rvBrBAf7HdI", title: "O triste fim… FalleN anuncia sua APOSENTADORIA do CS!"},
       ],
     },
     gallery: {
@@ -365,12 +364,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       title: "Scenes that lasted forever.",
       intro: "The clutches, the calls, the screams. A compilation that gives chills every time.",
       list: [
-        { youtubeId: "dQw4w9WgXcQ", title: "The AWP that stopped the world", description: "One of The Professor's most iconic clutches." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Columbus 2016 — Champion roar", description: "The moment Brazil reached the top of world CS." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Unforgettable 1v4", description: "When no one else believed, he did." },
-        { youtubeId: "dQw4w9WgXcQ", title: "The call that changed history", description: "Leadership in its purest form." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Cologne 2016 — Back-to-back", description: "The coronation of a golden generation." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Belo Horizonte — At home", description: "In front of the Brazilian crowd, an eternal triumph." },
+        { youtubeId: "poTRUphIZyQ", title: "Iconic plays from FalleN’s career"},
+        { youtubeId: "ovtpt9Wpfmo", title: "SK Gaming - The Dream"},
+        { youtubeId: "LMx9uzgqklg", title: "The Real Story of FalleN in Counter-Strike"},
+        { youtubeId: "TC6N1zHvXpU", title: "CS:GO - SK vs. Liquid [Cbble] Map 2 - ESL One Cologne 2016 - Grand Final"},
+        { youtubeId: "rAtxv1Z_w-c", title: "The FALLEN Miracle! 🔥 FURIA vs NAVI – StarLadder Budapest Major"},
+        { youtubeId: "rvBrBAf7HdI", title: "The end of an era… FalleN announces his retirement from Counter-Strike!"},
       ],
     },
     gallery: {
