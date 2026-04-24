@@ -415,6 +415,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
           title: "Close to fans",
           caption: "A legacy that was always bigger than the server.",
         },
+                        {
+          src: "/gallery/fallen-sorrindo.jpg",
+          alt: "FalleN em momento próximo aos fãs",
+          title: "Perto dos fãs",
+          caption: "Um legado que sempre foi maior que o servidor.",
+        },
       ],
     },
     social: { eyebrow: "Follow The Professor", title: "Official channels" },
