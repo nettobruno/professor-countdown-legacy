@@ -97,7 +97,6 @@ type SiteCopy = {
   finalCta: {
     titleLine1: string;
     titleHighlight: string;
-    description: string;
     todayDescription: string;
     afterDescription: string;
   };
@@ -311,10 +310,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     heroCopy: {
       eyebrow: "FAN TRIBUTE",
-      headline: "The day CS will stop.",
+      headline: "The end of a Counter-Strike era.",
       todayHeadline: "Today is for gratitude.",
       afterHeadline: "The Professor's legacy lives on.",
-      subhead: "The countdown to The Professor's retirement has already begun.",
+      subhead: "The competitive scene is already counting down to the Professor’s farewell.",
       todaySubhead: "Today competitive CS says goodbye to The Professor, and a whole community says thank you.",
       afterSubhead: "Competition became history. The Professor's legacy keeps living on every server.",
       shareLabel: "Share this tribute",
@@ -330,12 +329,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       eyebrow: "01 — Legacy",
       title: "The Professor's story.",
       intro:
-        'Gabriel "FalleN" Toledo is more than a name. He is a full chapter of Brazilian Counter-Strike — written with sweat, faith, and AWP.',
+        'Gabriel ‘FalleN’ Toledo isn’t just a name, he’s a whole chapter in Brazilian Counter-Strike, built on sweat, belief, and the AWP.',
       blocks: [
-        { title: "Origins", body: "Before majors, before arena lights, before being called The Professor, there was a kid from São Paulo in love with Counter-Strike. Gabriel Toledo built his career through pure effort, grinding through the night when becoming a pro in Brazil felt impossible. He believed when almost no one did — and that belief inspired an entire country." },
-        { title: "The Professor", body: "The nickname was earned. FalleN was never only a clinical AWPer — he was an educator. From Games Academy to educational YouTube videos, he opened doors that had been closed for years. He taught tactics, mindset, and that you could dream big in Portuguese. Every Brazilian player on an international stage carries part of what he planted." },
-        { title: "Leadership", body: "As IGL in the legendary SK/Luminosity era, FalleN led one of Counter-Strike's greatest runs. Two consecutive Majors — MLG Columbus 2016 and ESL One Cologne 2016 — changed forever how the world sees Brazilian CS. More than trophies, he left an example: humility in victory, dignity in defeat, and the certainty that leadership is also service." },
-        { title: "Legacy", body: "Talking about FalleN means talking about a whole generation. The clutch screams, the perfect calls, the AWP that looked alive. In a scene dominated by Europeans and North Americans, a Brazilian reached the top and brought others with him. When The Professor finally retires from competition, the scene won't be orphaned — it will be eternal." },
+        { title: "Origins", body: "Before the Majors, before the arena lights, before the title of ‘Professor,’ there was just a boy from the countryside of São Paulo who was in love with Counter-Strike. Gabriel Toledo built his career through sheer hard work, training through entire nights at a time when being a pro player in Brazil felt like something out of a movie. He believed when almost no one else did, and that belief went on to inspire an entire country." },
+        { title: "The Professor", body: "The nickname wasn’t given by chance. FalleN was never just a precise AWPer, he was a true builder of talent. From Games Academy to his educational YouTube videos, he opened doors that had been closed for years. He taught tactics, discipline, and, above all, that it was possible to dream big while speaking Portuguese. Every Brazilian player who has stepped onto an international stage carries a part of what the Professor helped build." },
+        { title: "Leadership", body: "As the IGL of the legendary SK and Luminosity era, FalleN led one of the greatest runs in Counter-Strike history. Back-to-back Major titles, MLG Columbus 2016 and ESL One Cologne 2016, forever changed how the world sees Brazilian CS. More than the trophies, though, what remained was the example: humility in victory, dignity in defeat, and the understanding that to lead is also to serve." },
+        { title: "Legacy", body: "To talk about FalleN is to talk about an entire generation. It’s remembering the roar after a clutch, the precise calls, the AWP that seemed to see beyond. It’s recognizing that, in a scene dominated by Europeans and North Americans, a Brazilian reached the top and brought others with him. When the Professor finally hangs up his competitive mouse, the scene won’t be left behind, it will become timeless. Because every new talent that rises carries, in some way, the seed he planted." },
       ],
     },
     titles: {
@@ -414,7 +413,6 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     finalCta: {
       titleLine1: "Tag that friend",
       titleHighlight: "who learned CS with The Professor.",
-      description: "This countdown deserves to reach everyone who once dreamed with a mouse in hand.",
       todayDescription:
         "Today this tribute is about gratitude. Send it to someone who lived this story with you.",
       afterDescription:
