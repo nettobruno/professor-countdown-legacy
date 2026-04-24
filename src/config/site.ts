@@ -16,8 +16,8 @@ export const socialLinks = {
 type Tournament = {
   event: string;
   year: number;
-  category: "Major" | "S-Tier" | "Tier 1" | "Outro";
-  result: string;
+  category: "Major" | "S-Tier" | "Tier-S" | "Tier-A" | "A-Tier" | "Tier 1" | "Outro";
+
   description?: string;
 };
 
@@ -193,11 +193,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
         "Lista curada por fãs com base em conquistas competitivas públicas. Cada linha aqui foi celebrada por um país inteiro.",
       footnote: "",
       tournaments: [
-        { event: "MLG Major Championship: Columbus", year: 2016, category: "Major", result: "🏆 Campeão", description: "Primeiro título de Major de uma equipe brasileira na era CS:GO." },
-        { event: "ESL One Cologne", year: 2016, category: "Major", result: "🏆 Campeão", description: "Bicampeonato de Majors consecutivos com a SK Gaming." },
-        { event: "ESL Pro League Season 4 — Finals", year: 2016, category: "S-Tier", result: "🏆 Campeão" },
-        { event: "DreamHack Masters Las Vegas", year: 2017, category: "S-Tier", result: "🏆 Campeão" },
-        { event: "ESL One Belo Horizonte", year: 2018, category: "S-Tier", result: "🏆 Campeão", description: "Título em casa, diante da torcida brasileira." },
+        { event: "MLG Columbus", year: 2016, category: "Major", description: "Primeiro título de Major de uma equipe brasileira na era CS:GO." },
+        { event: "ESL One Cologne", year: 2016, category: "Major", description: "Bicampeonato de Majors consecutivos com a SK Gaming." },
+        { event: "FISSURE Playground 2", year: 2025, category: "Tier-A" },
+        { event: "Thunderpick World Championship", year: 2025, category: "Tier-A"},
+        { event: "IEM Chengdu", year: 2025, category: "Tier-S" },
+        { event: "BLAST Rivals Season 2", year: 2025, category: "Tier-S" },
       ],
     },
     moments: {
@@ -351,11 +352,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       intro: "Fan-curated list based on public competitive wins. Every line here was celebrated by a whole country.",
       footnote: "",
       tournaments: [
-        { event: "MLG Major Championship: Columbus", year: 2016, category: "Major", result: "🏆 Champion", description: "First CS:GO Major title for a Brazilian team." },
-        { event: "ESL One Cologne", year: 2016, category: "Major", result: "🏆 Champion", description: "Back-to-back Majors with SK Gaming." },
-        { event: "ESL Pro League Season 4 — Finals", year: 2016, category: "S-Tier", result: "🏆 Champion" },
-        { event: "DreamHack Masters Las Vegas", year: 2017, category: "S-Tier", result: "🏆 Champion" },
-        { event: "ESL One Belo Horizonte", year: 2018, category: "S-Tier", result: "🏆 Champion", description: "A title won at home in front of the Brazilian crowd." },
+        { event: "MLG Major Columbus", year: 2016, category: "Major", description: "First CS:GO Major title for a Brazilian team." },
+        { event: "ESL One Cologne", year: 2016, category: "Major", description: "Back-to-back Majors with SK Gaming." },
+        { event: "FISSURE Playground 2", year: 2025, category: "A-Tier"},
+        { event: "Thunderpick World Championship", year: 2025, category: "A-Tier" },
+        { event: "IEM Chengdu", year: 2025, category: "S-Tier" },
+        { event: "BLAST Rivals Season 2", year: 2025, category: "S-Tier" },
       ],
     },
     moments: {
@@ -415,12 +417,13 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
           title: "Close to fans",
           caption: "A legacy that was always bigger than the server.",
         },
-                        {
+        {
           src: "/gallery/fallen-sorrindo.jpg",
-          alt: "FalleN em momento próximo aos fãs",
-          title: "Perto dos fãs",
-          caption: "Um legado que sempre foi maior que o servidor.",
+          alt: "FalleN in a moment close to fans",
+          title: "Close to fans",
+          caption: "A legacy that was always bigger than the server.",
         },
+        
       ],
     },
     social: { eyebrow: "Follow The Professor", title: "Official channels" },

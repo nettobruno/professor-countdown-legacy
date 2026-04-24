@@ -86,7 +86,6 @@ export const TitlesSection = () => {
                           isMajor ? "text-accent-yellow" : "text-foreground"
                         }`}
                       >
-                        {t.result}
                       </span>
                     </div>
                   </div>
