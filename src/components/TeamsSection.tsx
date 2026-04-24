@@ -21,7 +21,6 @@ const teams = [
     sizeClass: "max-h-32 md:max-h-40",
   },
   { name: "Team Liquid", logo: "/teams/team-6.svg" },
-  { name: "Last Dance", logo: "/teams/team-7.svg", sizeClass: "max-h-32 md:max-h-40" },
   {
     name: "Imperial",
     logo: "/teams/team-8.png",
