@@ -1,6 +1,15 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { RevealOnScroll } from "./RevealOnScroll";
-import { Trophy } from "lucide-react";
+
+const trophyImageByEvent: Record<string, string> = {
+  "MLG Columbus": "/thopys/colombus-trophy.webp",
+  "MLG Major Columbus": "/thopys/colombus-trophy.webp",
+  "ESL One Cologne": "/thopys/colgne-trophy.webp",
+  "FISSURE Playground 2": "/thopys/fissuere-trophy.webp",
+  "Thunderpick World Championship": "/thopys/thunderpick-trophy.webp",
+  "IEM Chengdu": "/thopys/chengdu-thophy.webp",
+  "BLAST Rivals Season 2": "/thopys/blast-trophy.webp",
+};
 
 export const TitlesSection = () => {
   const { content } = useLanguage();
@@ -33,6 +42,7 @@ export const TitlesSection = () => {
         <div className="mt-16 md:mt-20 grid gap-4 md:gap-5 max-w-5xl">
           {sorted.map((t, i) => {
             const isMajor = t.category === "Major";
+            const trophyImage = trophyImageByEvent[t.event];
             return (
               <RevealOnScroll key={`${t.event}-${t.year}`} delay={i * 60}>
                 <div
@@ -46,13 +56,24 @@ export const TitlesSection = () => {
 
                   <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
                     <div
-                      className={`flex items-center justify-center w-14 h-14 rounded-xl shrink-0 ${
+                      className={`flex items-center justify-center w-20 h-20 rounded-xl shrink-0 overflow-hidden p-2 ${
                         isMajor
                           ? "bg-accent-yellow/15 text-accent-yellow"
                           : "bg-accent-green/10 text-accent-green"
                       }`}
                     >
-                      <Trophy className="w-6 h-6" />
+                      {trophyImage ? (
+                        <img
+                          src={trophyImage}
+                          alt={`Troféu de ${t.event}`}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span className="font-display text-lg leading-none">
+                          {t.year}
+                        </span>
+                      )}
                     </div>
 
                     <div className="flex-1 min-w-0">
