@@ -4,26 +4,26 @@ export type CountdownPreviewState = "auto" | "before" | "today" | "after";
 export const retirementDate = "2026-12-20T23:59:59-03:00";
 
 export const socialLinks = {
-  youtube: "https://www.youtube.com/@fallen",
+  youtube: "https://www.youtube.com/channel/UCZhYB1iqqaL2gUvs452yvsg",
+  youtube2: "https://www.youtube.com/channel/UC-6e_TqEJw1ftKtstE-qSzQ",
   instagram: "https://www.instagram.com/fallen/",
   twitter: "https://x.com/FalleNCS",
   twitch: "https://www.twitch.tv/gafallen",
-  hltv: "https://www.hltv.org/player/2730/fallen",
-  hldddtv: "https://www.hltv.org/player/2730/fallen",
+  hltv: "https://www.hltv.org/player/2023/fallen",
+  fallenstore: "https://www.fallenstore.com.br/",
 };
 
 type Tournament = {
   event: string;
   year: number;
-  category: "Major" | "S-Tier" | "Tier 1" | "Outro";
-  result: string;
+  category: "Major" | "S-Tier" | "Tier-S" | "Tier-A" | "A-Tier" | "Tier 1" | "Outro";
+
   description?: string;
 };
 
 type IconicMoment = {
   youtubeId: string;
   title: string;
-  description: string;
 };
 
 type GalleryPhoto = {
@@ -98,7 +98,6 @@ type SiteCopy = {
   finalCta: {
     titleLine1: string;
     titleHighlight: string;
-    description: string;
     todayDescription: string;
     afterDescription: string;
   };
@@ -147,10 +146,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     heroCopy: {
       eyebrow: "TRIBUTO DE FÃ",
-      headline: "O dia que o CS vai parar.",
+      headline: "O fim de uma era no Counter-Strike",
       todayHeadline: "Hoje é dia de agradecer.",
       afterHeadline: "O legado do Professor continua.",
-      subhead: "A contagem regressiva para a aposentadoria do Professor já começou.",
+      subhead: "O cenário competitivo já vive a contagem regressiva para a despedida do Professor.",
       todaySubhead: "Hoje o competitivo se despede do Professor, e uma comunidade inteira agradece.",
       afterSubhead: "O competitivo ficou para a história. O legado do Professor segue vivo em cada servidor.",
       shareLabel: "Compartilhe esta homenagem",
@@ -166,23 +165,23 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       eyebrow: "01 — Legado",
       title: "A história do Professor.",
       intro:
-        'Gabriel "FalleN" Toledo não é só um nome. É um capítulo inteiro do Counter-Strike brasileiro — escrito a base de suor, fé e AWP.',
+        'Gabriel "FalleN" Toledo não é só um nome. É um capítulo inteiro do Counter-Strike brasileiro, escrito a base de suor, fé e AWP.',
       blocks: [
         {
           title: "Origens",
-          body: "Antes dos majors, antes das luzes da arena, antes do título de Professor, existia apenas um garoto de São Paulo apaixonado por Counter-Strike. Gabriel Toledo construiu sua carreira na base do esforço bruto, treinando madrugadas inteiras numa época em que ser pro player no Brasil parecia coisa de filme. Ele acreditou quando quase ninguém acreditava — e essa fé contagiou um país inteiro.",
+          body: "Antes dos Majors, antes das luzes da arena, antes do título de Professor, existia apenas um garoto do interior de São Paulo apaixonado por Counter-Strike. Gabriel Toledo construiu sua carreira com esforço bruto, treinando madrugadas inteiras em uma época em que ser pro player no Brasil parecia coisa de filme. Ele acreditou quando quase ninguém acreditava, e essa fé acabou contagiando um país inteiro.",
         },
         {
           title: "O Professor",
-          body: "O apelido não veio à toa. FalleN nunca foi apenas um AWPer cirúrgico — ele foi um educador. Da Games Academy aos vídeos didáticos no YouTube, ele abriu portas que estavam trancadas há anos. Ensinou táticas, ensinou postura, ensinou que dava pra sonhar grande falando português. Cada player brasileiro que pisou num palco internacional carrega uma parte do que o Professor plantou.",
+          body: "O apelido não veio por acaso. FalleN nunca foi apenas um AWPer preciso, foi um verdadeiro formador de talentos. Da Games Academy aos vídeos didáticos no YouTube, ele abriu portas que estavam fechadas há anos. Ensinou tática, postura e, principalmente, que era possível sonhar grande falando português. Cada jogador brasileiro que já pisou em um palco internacional carrega um pouco do que o Professor ajudou a construir.",
         },
         {
           title: "Liderança",
-          body: "Como IGL da lendária era SK/Luminosity, FalleN comandou uma das maiores caminhadas da história do Counter-Strike. Foram dois Majors consecutivos — MLG Columbus 2016 e ESL One Cologne 2016 — que mudaram para sempre a forma como o mundo enxerga o CS brasileiro. Mas mais do que troféus, ficou a postura: humildade nas vitórias, dignidade nas derrotas, e a certeza de que liderar é também servir.",
+          body: "Como IGL da lendária era SK e Luminosity, FalleN liderou uma das maiores trajetórias da história do Counter-Strike. Foram dois Majors consecutivos, MLG Columbus 2016 e ESL One Cologne 2016, conquistas que mudaram para sempre a forma como o mundo enxerga o CS brasileiro. Mais do que os troféus, porém, ficou o exemplo: humildade nas vitórias, dignidade nas derrotas e a certeza de que liderar também é servir.",
         },
         {
           title: "Legado",
-          body: "Falar de FalleN é falar de uma geração inteira. É lembrar do grito no clutch, do call certeiro, da AWP que parecia ter olhos. É lembrar que, num esporte dominado por europeus e americanos, um brasileiro chegou ao topo e ainda puxou outros junto. Quando o Professor finalmente pendurar o mouse competitivo, o cenário não fica órfão — fica eterno. Porque cada novo talento que surge daqui nasce, de alguma forma, da semente que ele plantou.",
+          body: "Falar de FalleN é falar de uma geração inteira. É lembrar do grito no clutch, do call preciso, da AWP que parecia enxergar além. É reconhecer que, em um cenário dominado por europeus e norte-americanos, um brasileiro chegou ao topo e ainda levou outros com ele. Quando o Professor finalmente pendurar o mouse competitivo, o cenário não ficará órfão, se tornará eterno. Porque cada novo talento que surge por aqui carrega, de alguma forma, a semente que ele plantou.",
         },
       ],
     },
@@ -193,11 +192,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
         "Lista curada por fãs com base em conquistas competitivas públicas. Cada linha aqui foi celebrada por um país inteiro.",
       footnote: "",
       tournaments: [
-        { event: "MLG Major Championship: Columbus", year: 2016, category: "Major", result: "🏆 Campeão", description: "Primeiro título de Major de uma equipe brasileira na era CS:GO." },
-        { event: "ESL One Cologne", year: 2016, category: "Major", result: "🏆 Campeão", description: "Bicampeonato de Majors consecutivos com a SK Gaming." },
-        { event: "ESL Pro League Season 4 — Finals", year: 2016, category: "S-Tier", result: "🏆 Campeão" },
-        { event: "DreamHack Masters Las Vegas", year: 2017, category: "S-Tier", result: "🏆 Campeão" },
-        { event: "ESL One Belo Horizonte", year: 2018, category: "S-Tier", result: "🏆 Campeão", description: "Título em casa, diante da torcida brasileira." },
+        { event: "MLG Columbus", year: 2016, category: "Major", description: "Primeiro título de Major de uma equipe brasileira na era CS:GO." },
+        { event: "ESL One Cologne", year: 2016, category: "Major", description: "Bicampeonato de Majors consecutivos com a SK Gaming." },
+        { event: "FISSURE Playground 2", year: 2025, category: "Tier-A" },
+        { event: "Thunderpick World Championship", year: 2025, category: "Tier-A"},
+        { event: "IEM Chengdu", year: 2025, category: "Tier-S" },
+        { event: "BLAST Rivals Season 2", year: 2025, category: "Tier-S" },
       ],
     },
     moments: {
@@ -205,12 +205,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       title: "Cenas que ficaram pra sempre.",
       intro: "Os clutches, os calls, os gritos. A coletânea que arrepia toda vez.",
       list: [
-        { youtubeId: "dQw4w9WgXcQ", title: "A AWP que parou o mundo", description: "Um dos clutches mais marcantes da carreira do Professor." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Columbus 2016 — O grito de campeão", description: "O momento em que o Brasil chegou ao topo do CS mundial." },
-        { youtubeId: "dQw4w9WgXcQ", title: "1v4 inesquecível", description: "Quando ninguém mais acreditava, ele acreditou." },
-        { youtubeId: "dQw4w9WgXcQ", title: "O call que virou a história", description: "Liderança em sua forma mais pura." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Cologne 2016 — Bicampeonato", description: "A consagração de uma geração dourada." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Belo Horizonte — Em casa", description: "Diante da torcida brasileira, o triunfo eterno." },
+        { youtubeId: "poTRUphIZyQ", title: "Jogadas que marcaram a carreira do Fallen"},
+        { youtubeId: "ovtpt9Wpfmo", title: "SK Gaming - The Dream"},
+        { youtubeId: "LMx9uzgqklg", title: "A Verdadeira História de FalleN no CS"},
+        { youtubeId: "TC6N1zHvXpU", title: "CS:GO - SK vs. Liquid [Cbble] Map 2 - ESL One Cologne 2016 - Grand Final"},
+        { youtubeId: "rAtxv1Z_w-c", title: "O MILAGRE DE FALLEN!🔥 FURIA x NAVI - StarLadder Budapest Major"},
+        { youtubeId: "rvBrBAf7HdI", title: "O triste fim… FalleN anuncia sua APOSENTADORIA do CS!"},
       ],
     },
     gallery: {
@@ -257,13 +257,18 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
           title: "Perto dos fãs",
           caption: "Um legado que sempre foi maior que o servidor.",
         },
+                {
+          src: "/gallery/fallen-sorrindo.jpg",
+          alt: "FalleN em momento próximo aos fãs",
+          title: "Perto dos fãs",
+          caption: "Um legado que sempre foi maior que o servidor.",
+        },
       ],
     },
     social: { eyebrow: "Acompanhe o Professor", title: "Canais oficiais" },
     finalCta: {
       titleLine1: "Marca aquele amigo",
       titleHighlight: "que aprendeu CS com o Professor.",
-      description: "Essa contagem regressiva merece chegar em todo brasileiro que um dia sonhou de mouse na mão.",
       todayDescription:
         "Hoje a homenagem é sobre agradecer. Envie para quem viveu essa história junto com você.",
       afterDescription:
@@ -313,10 +318,10 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
     },
     heroCopy: {
       eyebrow: "FAN TRIBUTE",
-      headline: "The day CS will stop.",
+      headline: "The end of a Counter-Strike era",
       todayHeadline: "Today is for gratitude.",
       afterHeadline: "The Professor's legacy lives on.",
-      subhead: "The countdown to The Professor's retirement has already begun.",
+      subhead: "The competitive scene is already counting down to the Professor’s farewell.",
       todaySubhead: "Today competitive CS says goodbye to The Professor, and a whole community says thank you.",
       afterSubhead: "Competition became history. The Professor's legacy keeps living on every server.",
       shareLabel: "Share this tribute",
@@ -332,12 +337,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       eyebrow: "01 — Legacy",
       title: "The Professor's story.",
       intro:
-        'Gabriel "FalleN" Toledo is more than a name. He is a full chapter of Brazilian Counter-Strike — written with sweat, faith, and AWP.',
+        'Gabriel ‘FalleN’ Toledo isn’t just a name, he’s a whole chapter in Brazilian Counter-Strike, built on sweat, belief, and the AWP.',
       blocks: [
-        { title: "Origins", body: "Before majors, before arena lights, before being called The Professor, there was a kid from São Paulo in love with Counter-Strike. Gabriel Toledo built his career through pure effort, grinding through the night when becoming a pro in Brazil felt impossible. He believed when almost no one did — and that belief inspired an entire country." },
-        { title: "The Professor", body: "The nickname was earned. FalleN was never only a clinical AWPer — he was an educator. From Games Academy to educational YouTube videos, he opened doors that had been closed for years. He taught tactics, mindset, and that you could dream big in Portuguese. Every Brazilian player on an international stage carries part of what he planted." },
-        { title: "Leadership", body: "As IGL in the legendary SK/Luminosity era, FalleN led one of Counter-Strike's greatest runs. Two consecutive Majors — MLG Columbus 2016 and ESL One Cologne 2016 — changed forever how the world sees Brazilian CS. More than trophies, he left an example: humility in victory, dignity in defeat, and the certainty that leadership is also service." },
-        { title: "Legacy", body: "Talking about FalleN means talking about a whole generation. The clutch screams, the perfect calls, the AWP that looked alive. In a scene dominated by Europeans and North Americans, a Brazilian reached the top and brought others with him. When The Professor finally retires from competition, the scene won't be orphaned — it will be eternal." },
+        { title: "Origins", body: "Before the Majors, before the arena lights, before the title of ‘Professor,’ there was just a boy from the countryside of São Paulo who was in love with Counter-Strike. Gabriel Toledo built his career through sheer hard work, training through entire nights at a time when being a pro player in Brazil felt like something out of a movie. He believed when almost no one else did, and that belief went on to inspire an entire country." },
+        { title: "The Professor", body: "The nickname wasn’t given by chance. FalleN was never just a precise AWPer, he was a true builder of talent. From Games Academy to his educational YouTube videos, he opened doors that had been closed for years. He taught tactics, discipline, and, above all, that it was possible to dream big while speaking Portuguese. Every Brazilian player who has stepped onto an international stage carries a part of what the Professor helped build." },
+        { title: "Leadership", body: "As the IGL of the legendary SK and Luminosity era, FalleN led one of the greatest runs in Counter-Strike history. Back-to-back Major titles, MLG Columbus 2016 and ESL One Cologne 2016, forever changed how the world sees Brazilian CS. More than the trophies, though, what remained was the example: humility in victory, dignity in defeat, and the understanding that to lead is also to serve." },
+        { title: "Legacy", body: "To talk about FalleN is to talk about an entire generation. It’s remembering the roar after a clutch, the precise calls, the AWP that seemed to see beyond. It’s recognizing that, in a scene dominated by Europeans and North Americans, a Brazilian reached the top and brought others with him. When the Professor finally hangs up his competitive mouse, the scene won’t be left behind, it will become timeless. Because every new talent that rises carries, in some way, the seed he planted." },
       ],
     },
     titles: {
@@ -346,11 +351,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       intro: "Fan-curated list based on public competitive wins. Every line here was celebrated by a whole country.",
       footnote: "",
       tournaments: [
-        { event: "MLG Major Championship: Columbus", year: 2016, category: "Major", result: "🏆 Champion", description: "First CS:GO Major title for a Brazilian team." },
-        { event: "ESL One Cologne", year: 2016, category: "Major", result: "🏆 Champion", description: "Back-to-back Majors with SK Gaming." },
-        { event: "ESL Pro League Season 4 — Finals", year: 2016, category: "S-Tier", result: "🏆 Champion" },
-        { event: "DreamHack Masters Las Vegas", year: 2017, category: "S-Tier", result: "🏆 Champion" },
-        { event: "ESL One Belo Horizonte", year: 2018, category: "S-Tier", result: "🏆 Champion", description: "A title won at home in front of the Brazilian crowd." },
+        { event: "MLG Major Columbus", year: 2016, category: "Major", description: "First CS:GO Major title for a Brazilian team." },
+        { event: "ESL One Cologne", year: 2016, category: "Major", description: "Back-to-back Majors with SK Gaming." },
+        { event: "FISSURE Playground 2", year: 2025, category: "A-Tier"},
+        { event: "Thunderpick World Championship", year: 2025, category: "A-Tier" },
+        { event: "IEM Chengdu", year: 2025, category: "S-Tier" },
+        { event: "BLAST Rivals Season 2", year: 2025, category: "S-Tier" },
       ],
     },
     moments: {
@@ -358,12 +364,12 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
       title: "Scenes that lasted forever.",
       intro: "The clutches, the calls, the screams. A compilation that gives chills every time.",
       list: [
-        { youtubeId: "dQw4w9WgXcQ", title: "The AWP that stopped the world", description: "One of The Professor's most iconic clutches." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Columbus 2016 — Champion roar", description: "The moment Brazil reached the top of world CS." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Unforgettable 1v4", description: "When no one else believed, he did." },
-        { youtubeId: "dQw4w9WgXcQ", title: "The call that changed history", description: "Leadership in its purest form." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Cologne 2016 — Back-to-back", description: "The coronation of a golden generation." },
-        { youtubeId: "dQw4w9WgXcQ", title: "Belo Horizonte — At home", description: "In front of the Brazilian crowd, an eternal triumph." },
+        { youtubeId: "poTRUphIZyQ", title: "Iconic plays from FalleN’s career"},
+        { youtubeId: "ovtpt9Wpfmo", title: "SK Gaming - The Dream"},
+        { youtubeId: "LMx9uzgqklg", title: "The Real Story of FalleN in Counter-Strike"},
+        { youtubeId: "TC6N1zHvXpU", title: "CS:GO - SK vs. Liquid [Cbble] Map 2 - ESL One Cologne 2016 - Grand Final"},
+        { youtubeId: "rAtxv1Z_w-c", title: "The FALLEN Miracle! 🔥 FURIA vs NAVI – StarLadder Budapest Major"},
+        { youtubeId: "rvBrBAf7HdI", title: "The end of an era… FalleN announces his retirement from Counter-Strike!"},
       ],
     },
     gallery: {
@@ -410,13 +416,19 @@ export const localizedSiteContent: Record<Locale, SiteCopy> = {
           title: "Close to fans",
           caption: "A legacy that was always bigger than the server.",
         },
+        {
+          src: "/gallery/fallen-sorrindo.jpg",
+          alt: "FalleN in a moment close to fans",
+          title: "Close to fans",
+          caption: "A legacy that was always bigger than the server.",
+        },
+        
       ],
     },
     social: { eyebrow: "Follow The Professor", title: "Official channels" },
     finalCta: {
       titleLine1: "Tag that friend",
       titleHighlight: "who learned CS with The Professor.",
-      description: "This countdown deserves to reach everyone who once dreamed with a mouse in hand.",
       todayDescription:
         "Today this tribute is about gratitude. Send it to someone who lived this story with you.",
       afterDescription:

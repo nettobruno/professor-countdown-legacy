@@ -34,7 +34,6 @@ export const MomentsSection = () => {
                     {m.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    {m.description}
                   </p>
                 </div>
               </article>

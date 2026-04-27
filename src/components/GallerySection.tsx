@@ -83,12 +83,6 @@ export const GallerySection = () => {
                     emptyHint={content.gallery.emptyHint}
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/75 to-transparent p-5 pt-20 md:p-6 md:pt-24">
-                    <h3 className="font-display text-2xl tracking-wide md:text-3xl">
-                      {photo.title}
-                    </h3>
-                    <figcaption className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                      {photo.caption}
-                    </figcaption>
                     {photo.credit && (
                       <p className="mt-3 text-xs uppercase tracking-[0.18em] text-accent-green/80">
                         {photo.credit}
