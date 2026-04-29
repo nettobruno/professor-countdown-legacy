@@ -6,13 +6,13 @@ const teams = [
   {
     name: "KaBuM! e-Sports",
     logo: "/teams/team-1.png",
-    url: "https://www.hltv.org/team/5822/kabum",
+    url: "https://esports.kabum.com.br/",
     sizeClass: "max-h-32 md:max-h-40",
   },
   {
     name: "Vivo Keyd",
     logo: "/teams/team-2.png",
-    url: "https://www.hltv.org/team/6033/keyd-stars",
+    url: "https://shop.keydstars.com.br/",
     sizeClass: "max-h-32 md:max-h-40",
   },
   {
