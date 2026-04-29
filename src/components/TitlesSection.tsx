@@ -11,6 +11,21 @@ const trophyImageByEvent: Record<string, string> = {
   "BLAST Rivals Season 2": "/thopys/blast-trophy.webp",
 };
 
+const hltvLinkByEvent: Record<string, string> = {
+  "MLG Columbus":
+    "https://www.hltv.org/events/2027/mlg-columbus-2016",
+  "ESL One Cologne":
+    "https://www.hltv.org/events/2062/esl-one-cologne-2016",
+  "FISSURE Playground 2":
+    "https://www.hltv.org/events/8064/fissure-playground-2",
+  "Thunderpick World Championship":
+    "https://www.hltv.org/events/8067/thunderpick-world-championship-2025",
+  "IEM Chengdu":
+    "https://www.hltv.org/events/8041/iem-chengdu-2025",
+  "BLAST Rivals Season 2":
+    "https://www.hltv.org/events/7908/blast-rivals-2025-season-2", // ajuste se quiser
+};
+
 export const TitlesSection = () => {
   const { content } = useLanguage();
 
@@ -31,9 +46,11 @@ export const TitlesSection = () => {
           <span className="text-xs uppercase tracking-[0.3em] text-accent-green">
             {content.titles.eyebrow}
           </span>
+
           <h2 className="mt-4 font-display text-5xl md:text-7xl leading-[0.95]">
             {content.titles.title}
           </h2>
+
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             {content.titles.intro}
           </p>
@@ -43,10 +60,15 @@ export const TitlesSection = () => {
           {sorted.map((t, i) => {
             const isMajor = t.category === "Major";
             const trophyImage = trophyImageByEvent[t.event];
+            const hltvLink = hltvLinkByEvent[t.event];
+
             return (
               <RevealOnScroll key={`${t.event}-${t.year}`} delay={i * 60}>
-                <div
-                  className={`group relative overflow-hidden rounded-2xl glass p-6 md:p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent-green/40 ${
+                <a
+                  href={hltvLink || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group block relative overflow-hidden rounded-2xl glass p-6 md:p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent-green/40 ${
                     isMajor ? "border-accent-yellow/30" : ""
                   }`}
                 >
@@ -66,7 +88,7 @@ export const TitlesSection = () => {
                         <img
                           src={trophyImage}
                           alt={`Troféu de ${t.event}`}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                           loading="lazy"
                         />
                       ) : (
@@ -87,30 +109,24 @@ export const TitlesSection = () => {
                         >
                           {t.category}
                         </span>
+
                         <span className="text-xs text-muted-foreground">
                           {t.year}
                         </span>
                       </div>
-                      <h3 className="font-display text-2xl md:text-3xl tracking-wide">
+
+                      <h3 className="font-display text-2xl md:text-3xl tracking-wide group-hover:text-accent-green transition">
                         {t.event}
                       </h3>
+
                       {t.description && (
                         <p className="mt-2 text-sm md:text-base text-muted-foreground">
                           {t.description}
                         </p>
                       )}
                     </div>
-
-                    <div className="md:text-right">
-                      <span
-                        className={`font-display text-2xl md:text-3xl ${
-                          isMajor ? "text-accent-yellow" : "text-foreground"
-                        }`}
-                      >
-                      </span>
-                    </div>
                   </div>
-                </div>
+                </a>
               </RevealOnScroll>
             );
           })}
